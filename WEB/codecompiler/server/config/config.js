@@ -9,7 +9,7 @@ module.exports = {
     },
     production: {
         rootPath: rootPath,
-        db: 'mongodb://<username>:<password>@<sfs>.mongolab.com:43997/codecompilerusers',
+        db: 'mongodb:....codecompilerusers',
         port: process.env.PORT || 7070
     }
 }
