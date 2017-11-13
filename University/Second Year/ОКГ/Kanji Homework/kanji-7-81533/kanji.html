@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<script src="three.min.js"></script>
+		<script src="kanji.js"></script>
+	</head>
+
+	<body onload="main()">
+		<h1>ф.н. 81533 &ndash; група 7 &ndash; Радослав Радков</h1>
+
+		<script>
+			var scaleVariable = 1/2;
+
+		//Lower part of kanji. Under the slice
+			//lower part of first symbol
+			var kanji1 = new THREE.Shape();
+			kanji1.moveTo(-9*scaleVariable, -8*scaleVariable);
+			kanji1.lineTo(-4*scaleVariable, -7.5*scaleVariable);
+			kanji1.lineTo(-4*scaleVariable, -9.5*scaleVariable);
+			kanji1.lineTo(-16*scaleVariable, -11*scaleVariable);
+			kanji1.lineTo(-18*scaleVariable, -9.2*scaleVariable);
+			kanji1.lineTo(-12*scaleVariable, -8.4*scaleVariable);
+			kanji1.lineTo(-12*scaleVariable, 2*scaleVariable);
+			kanji1.lineTo(-16*scaleVariable, 2*scaleVariable);
+			kanji1.lineTo(-16*scaleVariable, 4*scaleVariable);
+			kanji1.lineTo(-12*scaleVariable, 4*scaleVariable);
+			kanji1.lineTo(-12*scaleVariable, 7*scaleVariable);
+			kanji1.lineTo(-14*scaleVariable, 7*scaleVariable);
+			kanji1.lineTo(-12*scaleVariable, 9*scaleVariable);
+			kanji1.lineTo(-9*scaleVariable, 9*scaleVariable);
+			kanji1.lineTo(-7*scaleVariable, 7*scaleVariable);
+			kanji1.lineTo(-9*scaleVariable, 7*scaleVariable);
+			kanji1.lineTo(-9*scaleVariable, 4*scaleVariable);
+			kanji1.lineTo(-5.5*scaleVariable, 4*scaleVariable);
+			kanji1.lineTo(-5.5*scaleVariable, 2*scaleVariable);
+			kanji1.lineTo(-9*scaleVariable, 2*scaleVariable);
+
+			//bottom left curve
+			var curve3 = new THREE.Shape();
+			curve3.moveTo(-15.5*scaleVariable, -8*scaleVariable);
+			curve3.lineTo(-13*scaleVariable, -7*scaleVariable);
+			curve3.bezierCurveTo(-13*scaleVariable, -7*scaleVariable, -12*scaleVariable, -4*scaleVariable, -15*scaleVariable, 1*scaleVariable);
+			curve3.lineTo(-17.5*scaleVariable, 0*scaleVariable);
+			curve3.bezierCurveTo(-17.5*scaleVariable, 0*scaleVariable, -15*scaleVariable, -4*scaleVariable, -15.5*scaleVariable, -8*scaleVariable);
+
+			//bottom right curve
+			var curve4 = new THREE.Shape();
+			curve4.moveTo(-8*scaleVariable, -6.8*scaleVariable);
+			curve4.lineTo(-5.5*scaleVariable, -7.5*scaleVariable);
+			curve4.bezierCurveTo(-5.5*scaleVariable, -7*scaleVariable, -3.5*scaleVariable, -5*scaleVariable, -4*scaleVariable, 0*scaleVariable);
+			curve4.lineTo(-6.5*scaleVariable, 1*scaleVariable);
+			curve4.bezierCurveTo(-6.5*scaleVariable, 1*scaleVariable, -6*scaleVariable, -5*scaleVariable, -8*scaleVariable, -6.8*scaleVariable);
+
+			//lower part of second symbol
+			var kanji2 = new THREE.Shape();
+			kanji2.moveTo(-2.5*scaleVariable, 2.5*scaleVariable);//1
+			kanji2.lineTo(-3.5*scaleVariable, 2.5*scaleVariable);//2
+			kanji2.lineTo(-3.5*scaleVariable, -12*scaleVariable);//3
+			kanji2.lineTo(-3*scaleVariable, -12*scaleVariable);//4
+			kanji2.lineTo(-0.3*scaleVariable, -12*scaleVariable);//5
+			kanji2.lineTo(-0.3*scaleVariable, -9.5*scaleVariable);//6
+			kanji2.lineTo(6*scaleVariable, -9.5*scaleVariable);//7
+			kanji2.lineTo(6*scaleVariable, -12*scaleVariable);//8
+			kanji2.lineTo(8.7*scaleVariable, -11.7*scaleVariable);//9
+			kanji2.lineTo(8.7*scaleVariable, -8.7*scaleVariable);//10
+			kanji2.lineTo(6.3*scaleVariable, -6.3*scaleVariable);//11
+			kanji2.lineTo(6.3*scaleVariable, -7.3*scaleVariable);//12
+			kanji2.lineTo(-0.3*scaleVariable, -7.3*scaleVariable);//13
+			kanji2.lineTo(-0.3*scaleVariable, -0.8*scaleVariable);//14
+			kanji2.lineTo(0.8*scaleVariable, -0.8*scaleVariable);//15
+
+			//lower part of left cut curve
+			var curve1 = new THREE.Shape();
+			curve1.moveTo(-16.5*scaleVariable, 8*scaleVariable);
+			curve1.lineTo(-15*scaleVariable, 6*scaleVariable);
+			curve1.bezierCurveTo(-15*scaleVariable, 6*scaleVariable, -13.5*scaleVariable, 6*scaleVariable, -10.7*scaleVariable, 10.7*scaleVariable);
+			curve1.lineTo(-12.5*scaleVariable, 12.5*scaleVariable);
+			curve1.bezierCurveTo(-12.5*scaleVariable, 12.5*scaleVariable, -13.5*scaleVariable, 10*scaleVariable, -16.5*scaleVariable, 8*scaleVariable);
+
+			//lower left cut part of curve over the second symbol
+			var curve7 = new THREE.Shape();
+			curve7.moveTo(-5.5*scaleVariable, 5.5*scaleVariable);
+			curve7.lineTo(-3.2*scaleVariable, 3.2*scaleVariable);
+			curve7.lineTo(-4.1*scaleVariable, 2.5*scaleVariable);
+			curve7.lineTo(-6.2*scaleVariable, 5*scaleVariable);
+
+		//Upper part of kanji
+			var kanji3 = new THREE.Shape();
+			kanji3.moveTo(-2.5*scaleVariable, 2.5*scaleVariable);
+			kanji3.lineTo(8.7*scaleVariable, 2.5*scaleVariable);
+			kanji3.lineTo(8.7*scaleVariable, -8.7*scaleVariable);
+			kanji3.lineTo(6.3*scaleVariable, -6.3*scaleVariable);
+			kanji3.lineTo(6.3*scaleVariable, -0.8*scaleVariable);
+			kanji3.lineTo(0.8*scaleVariable, -0.8*scaleVariable);
+
+			var kanji4 = new THREE.Shape();
+			kanji4.moveTo(-7*scaleVariable, 7*scaleVariable);
+			kanji4.lineTo(-6*scaleVariable, 7*scaleVariable);
+			kanji4.lineTo(-6*scaleVariable, 9*scaleVariable);
+			kanji4.lineTo(-9*scaleVariable, 9*scaleVariable);
+
+			//upper part of left cut curve
+			var curve2 = new THREE.Shape();
+			curve2.moveTo(-10.7*scaleVariable, 10.7*scaleVariable);
+			curve2.bezierCurveTo(-10.7*scaleVariable, 10.7*scaleVariable, -9.8*scaleVariable, 12*scaleVariable, -8.7*scaleVariable, 15.7*scaleVariable);
+			curve2.lineTo(-11*scaleVariable, 16.7*scaleVariable);
+			curve2.bezierCurveTo(-11*scaleVariable, 16.7*scaleVariable, -11*scaleVariable, 15*scaleVariable, -12.5*scaleVariable, 12.5*scaleVariable);
+
+			//upper curve, which is going down
+			var curve5 = new THREE.Shape();
+			curve5.moveTo(-10*scaleVariable, 13*scaleVariable);
+			curve5.lineTo(-10*scaleVariable, 15*scaleVariable);
+			curve5.bezierCurveTo(-10*scaleVariable, 15*scaleVariable, -6*scaleVariable, 14*scaleVariable, -3.5*scaleVariable, 11*scaleVariable);
+			curve5.lineTo(-5*scaleVariable, 9.5*scaleVariable);
+			curve5.bezierCurveTo(-5*scaleVariable, 9.5*scaleVariable, -6*scaleVariable, 11*scaleVariable, -10*scaleVariable, 13*scaleVariable);
+
+			//upper right curve over the second symbol
+			var curve6 = new THREE.Shape();
+			curve6.moveTo(3.5*scaleVariable, 16*scaleVariable);
+			curve6.bezierCurveTo(3.5*scaleVariable, 16*scaleVariable, 4*scaleVariable, 8*scaleVariable, 9.5*scaleVariable, 2.2*scaleVariable);
+			curve6.lineTo(12*scaleVariable, 4.4*scaleVariable);
+			curve6.bezierCurveTo(12*scaleVariable, 4.4*scaleVariable, 7*scaleVariable, 9*scaleVariable, 6*scaleVariable, 16.5*scaleVariable);
+
+
+			//upper left cut part of curve over the second symbol
+			var curve8 = new THREE.Shape();
+			curve8.moveTo(-3.2*scaleVariable, 3.2*scaleVariable);
+			curve8.bezierCurveTo(-3.2*scaleVariable, 3.2*scaleVariable, 2*scaleVariable, 7*scaleVariable, 2.5*scaleVariable, 16*scaleVariable);
+			curve8.lineTo(-0.5*scaleVariable, 16.5*scaleVariable);
+			curve8.bezierCurveTo(-0.5*scaleVariable, 16.5*scaleVariable, -1*scaleVariable, 9*scaleVariable, -5.5*scaleVariable, 5.5*scaleVariable);
+
+			var extrudeSettings = {
+				steps: 1,
+				amount: 4,
+				bevelEnabled: false,
+				bevelThickness: 1.0,
+				bevelSize: 1.0,
+				bevelSegments: 1
+			};
+
+			var material = new THREE.MeshPhongMaterial( {color:'gray',shininess:100} );
+
+			var k1 = new THREE.Mesh(new THREE.ExtrudeGeometry( kanji1, extrudeSettings ), material);
+			var k2 = new THREE.Mesh( new THREE.ExtrudeGeometry( kanji2, extrudeSettings ), material );
+			var k3 = new THREE.Mesh(new THREE.ExtrudeGeometry( kanji3, extrudeSettings ), material);
+			var k4 = new THREE.Mesh(new THREE.ExtrudeGeometry( kanji4, extrudeSettings ), material);
+
+			var c1 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve1, extrudeSettings ), material);
+			var c2 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve2, extrudeSettings ), material);
+			var c3 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve3, extrudeSettings ), material);
+			var c4 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve4, extrudeSettings ), material);
+			var c5 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve5, extrudeSettings ), material);
+			var c6 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve6, extrudeSettings ), material);
+			var c7 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve7, extrudeSettings ), material);
+			var c8 = new THREE.Mesh(new THREE.ExtrudeGeometry( curve8, extrudeSettings ), material);
+
+			part1.add( k3, k4, c2, c5, c6, c8 );
+			part2.add( k1, k2, c1, c3, c4, c7 );
+
+
+			// Файлът kanji.js се грижи да нарисува земята и двете половини
+			// на йероглифа; грижи се и раздалечаването и приближаването на
+			// тези половини; показване/скриване на рамката; звукови ефекти
+			// и потрепване. Това е само за ваша информация, ако евентуално
+			// се чудете къде се прави магията. Това май е най-подравненият
+			// коментар досега -- както отляво, така и отдясно е подравнен.
+		</script>
+	</body>
+</html>

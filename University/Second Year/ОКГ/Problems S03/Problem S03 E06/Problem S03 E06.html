@@ -31,9 +31,10 @@
 			var MyCurve = THREE.Curve.create(
 				function ( ) {}, // конструктор
 				function (t) { // метод, който изчислява точка от кривата в позиция t, като t=[0,1]
-					var x = 6*Math.cos(2*t);
-					var y = 6*Math.sin(2*t);
-					var z = 0;
+					var r = 6+Math.cos(30*Math.PI*t);
+					var x = r*Math.cos(2*Math.PI*t);
+					var y = r*Math.sin(2*Math.PI*t);
+					var z = Math.sin(30*Math.PI*t);
 					return new THREE.Vector3(x,y,z);
 				}
 			);
@@ -42,7 +43,7 @@
 
 			// Създаваме тръбовидна форма, използвайки инстанция
 			// на нашата крива MyCurve.
-			var geometry = new THREE.TubeGeometry(new MyCurve(),60,2,16);
+			var geometry = new THREE.TubeGeometry(new MyCurve(), 360, 0.4, 16, true);
 			var material = new THREE.MeshPhongMaterial();
 			var surface = new THREE.Mesh( geometry, material );
 			scene.add( surface );
