@@ -23,9 +23,10 @@ unsigned int Tree<T>::countNodes()
 template <typename T>
 void Tree<T>::addNode(T nodeVal, char* trace, Node<T>* crr)
 {
-	if (trace[0] == '\0')
+	if (trace == nullptr)
 	{
 		root = new Node<T>(nodeVal);
+		return;
 	}
 
 	if (trace[0] == 'L')
@@ -33,7 +34,7 @@ void Tree<T>::addNode(T nodeVal, char* trace, Node<T>* crr)
 		addNode(nodeVal, trace+1, root->left);
 	}
 
-	if (trace[0]	 == 'R')
+	if (trace[0] == 'R')
 	{
 		addNode(nodeVal, trace+1, root->right);
 	}

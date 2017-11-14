@@ -5,7 +5,7 @@
 void testAddNodes()
 {
 	Tree<int> t;
-	t.addNode(1, "\0");
+	t.addNode(1, "");
 	t.addNode(2, "L");
 	t.addNode(3, "R");
 	t.addNode(4, "L");
