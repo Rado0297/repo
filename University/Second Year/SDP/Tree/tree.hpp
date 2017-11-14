@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+
 #ifndef TREE_HPP
 #define TREE_HPP
 
@@ -23,8 +26,9 @@ class Tree
 private:
 	Node<T>* root;
 
-	void addNode(T nodeVal, char* trace, Node<T>* crr);
+	void addNode(T nodeVal, char* trace, Node<T> *&crr);
 	unsigned int countNodes(Node<T>* root);
+	unsigned int countEvenNodes(Node<T>* root);
 
 public:
 	Tree();
@@ -33,6 +37,7 @@ public:
 	//Functions
 	void addNode(T nodeVal, char* trace);
 	unsigned int countNodes();
+	unsigned int countEvenNodes();
 };
 
 #endif TREE_HPP
