@@ -1,0 +1,4 @@
+#lang racket
+(define (meetTwice f g a b)
+  ()
+)

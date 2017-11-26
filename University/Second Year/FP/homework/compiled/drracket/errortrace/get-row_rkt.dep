@@ -1,0 +1,1 @@
+("6.10.1" ("5276055f291a81bcd2c9e2de29c8306026d6f713" . "2f4d00f912618b49b059ceafaf686121e177ec95") #"/home/radoslav/Documents/University/Second Year/FP/homework/./make-matrix.rkt" (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"rackunit" #"main.rkt") (collects #"rackunit" #"text-ui.rkt"))
