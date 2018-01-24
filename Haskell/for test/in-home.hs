@@ -15,6 +15,16 @@ primeNum :: Int -> Bool
 primeNum x = null [y | y <- [2..(x-1)], y `divides` x]
     where divides p q = q `mod` p == 0
 
+--without list comprehension
+-- primeNum'' :: Int -> Int -> Bool
+-- primeNum'' x y
+--     | y `divides` x = True
+--     | y == (x - 1) = False
+--     | otherwise = primeNum'' x (y + 1)
+--         where divides p q = q  `mod` p == 0
+-- primeNum' :: Int -> Int
+-- primeNum' x = primeNum'' x 2
+
 primesUntil :: Int -> [Int]
 primesUntil x = [y | y <- [2..x], primeNum y]
 
