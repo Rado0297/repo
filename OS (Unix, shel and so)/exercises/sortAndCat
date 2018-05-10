@@ -1,0 +1,13 @@
+#!/bin/bash
+
+touch result.txt
+
+cat ex1 ex2 >result.txt
+
+sort result.txt
+
+more result.txt
+
+wc -c ex1
+wc -c ex2
+wc -c result.txt

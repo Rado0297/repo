@@ -1,0 +1,20 @@
+#!/bin/bash
+
+declare fileName
+declare -i m
+declare -i n
+
+# m < n !
+read fileName m n
+
+touch swap.txt
+
+tail -$m $fileName >swap.txt
+
+sort -r swap.txt
+
+rm swap.txt
+
+# m = 10
+# n = 26
+# n - m = 16

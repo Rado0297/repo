@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo $(more script)
+read str
+
+write "radoslav" $str

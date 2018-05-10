@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "List of logged in users:"
+who
+
+echo "Count of logged users: $(who | wc -l)"

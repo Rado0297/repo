@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#* Получава като параметър на командния ред име на съществуваща директория. Извежда подходящо съобщение на стандартния изход за броя на всички файлове в нея, броя на обикновените и броя на директориите.
+
+
+declare directory
+
+read directory
+
+ls -l $directory >> temp1.txt
+echo "There are:"
+wc -l temp1.txt
+echo "files and directories."
+
+grep "drwxrwxr-x" temp1.txt >> dirs.txt
+
+echo "There are:"
+wc -l dirs.txt
+echo "directories."
+rm dirs.txt
+
+grep "rw-rw-r-- 1" temp1.txt >> files.txt
+echo "There are:"
+wc -l files.txt
+echo "files."
+rm files.txt
+
+rm temp1.txt
+
+#Tests made with: /home/radoslav/Documents/GITHUB/allHomeworks/C++

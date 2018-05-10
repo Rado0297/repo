@@ -1,0 +1,6 @@
+#!/bin/bash
+var=100
+export var
+./script2
+
+echo "Here is end of first script"

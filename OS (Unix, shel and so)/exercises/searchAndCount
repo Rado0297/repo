@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#start with ./searchAndCount msg result.txt
+
+#read value file
+
+
+touch res
+grep msg result.txt >res
+
+echo $(wc -l res)
+
+#echo $(wc -l | grep msg result.txt)

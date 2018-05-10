@@ -1,0 +1,21 @@
+#!/bin/bash
+
+declare fileNameWithADot
+declare length
+declare index
+declare begining
+declare result
+
+read fileNameWithADot
+
+length=`expr length $fileNameWithADot`
+
+index=`expr index $fileNameWithADot .`
+
+begining=`expr substr $fileNameWithADot 1 $index`
+
+result=$begining"bak"
+
+echo $begining
+
+echo $result

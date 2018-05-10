@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+#Получава като параметър на командния ред име на съществуваща директория. Извежда на стандартния изход подходящо съобщение за броя на файловете в нея, започващи с a, на тези завъшващи с .c и сумата от двете.
+
+
+declare directory
+
+read directory
+
+ls $directory\/a* >>temp1.txt
+
+echo "There are:"
+wc -l temp1.txt
+echo "files that start with a"
+
+ls $directory\/*.c >>temp2.txt
+
+echo "There are:"
+wc -l temp2.txt
+echo "files that end with .c"
+
+echo "Total there are:"
+cat temp1.txt temp2.txt >> temp3.txt
+rm temp1.txt
+rm temp2.txt
+
+wc -l temp3.txt
+rm temp3.txt
+echo "files that start with a and that end with .c (not always both conditions are true)"
+
+#Tests made with: /home/radoslav/Documents/GITHUB/allHomeworks/C++

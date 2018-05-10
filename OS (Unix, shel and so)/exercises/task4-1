@@ -1,0 +1,8 @@
+#!/bin/bash
+
+declare username
+declare existingFile
+
+read username existingFile
+
+write $username <$existingFile

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#execute: ./ex2 arg1 arg2 arg3 arg4
+
+#echo "The first argument is $1, the second $2"
+#echo "All arguments you entered: $*"
+#echo "There are $# arguments"
+
+#echo
+#echo
+
+#for this execute: "./ex2 /etc" for example
+ls -l | wc -w

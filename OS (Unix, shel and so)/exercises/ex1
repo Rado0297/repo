@@ -1,0 +1,19 @@
+#!/bin/bash
+
+num1=10
+num2=20
+msg1="$num1 < $num2 & $num2 > $num1"
+
+#echo $msg1
+
+msg2="\$100 > \$10"
+
+#echo $msg2
+
+msg3='Here we can use all of these symbols: ".", ">", "<", "|", "$", etc'
+
+#echo $msg3
+
+#echo ""\$msg1" is not needed to print '$num1 < $num2 & $num2 > $num1'"
+
+echo "Date is $(date)"

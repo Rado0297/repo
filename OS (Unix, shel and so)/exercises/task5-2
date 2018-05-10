@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Получава като параметър на командния ред име на съществуващ файл, съдържащо точка. Преименува файла, като новото име има bak вместо символите след точката.
+
+declare fileName
+declare length
+declare index
+declare begining
+
+read fileName
+
+length=`expr length $fileName`
+index=`expr index $fileName .`
+begining=`expr substr $fileName 1 $index`
+
+mv $fileName $begining"bak"

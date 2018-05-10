@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set `ls /home/radoslav`
+echo $1 $2 $3
+#echo $#
+#echo $*
+
+echo "SHIFT"
+shift 2
+
+echo $1 $2 $3
+#echo $#
+#echo $*

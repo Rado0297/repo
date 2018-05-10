@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "The value of var is $var"
+echo "End of second script"

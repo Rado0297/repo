@@ -1,0 +1,7 @@
+#!/bin/bash
+
+declare existingFile
+
+read existingFile
+
+sort $existingFile >>$existingFile

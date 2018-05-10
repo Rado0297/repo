@@ -1,0 +1,9 @@
+#!/bin/bash
+
+declare username
+
+who >res2
+
+(grep "$username" <res2) >lines
+
+wc -l lines

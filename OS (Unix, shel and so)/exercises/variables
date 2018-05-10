@@ -1,0 +1,11 @@
+#!/bin/bash
+
+declare -i var1
+var1=100
+echo $var1
+
+declare -r var2=123.456
+echo $var2
+
+var2=456.123
+echo $var2
