@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Check if given path is a directory
+
+declare directory
+read directory
+
+if test -d "$directory"
+then echo "Success: This is dorectory $directory"
+else echo "Error: There is no directory with that path!"
+fi

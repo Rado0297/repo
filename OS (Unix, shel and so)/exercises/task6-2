@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Да се състави командна процедура, която получава като параметър на командния ред имe на потребител. Ако потребителя е логически включен в системата, му се изпраща съобщение "Please logout"
+
+
+
+#Status - Undone task
+
+
+
+declare username
+declare -i a
+
+read username
+
+a=$(grep -c "$username" \/etc\/\passwd)
+
+if $(($a == 1))
+then echo "Please logout!"
+fi
