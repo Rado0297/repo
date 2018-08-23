@@ -1,0 +1,83 @@
+\hypertarget{classCar}{}\section{Car Class Reference}
+\label{classCar}\index{Car@{Car}}
+
+
+Inheritance diagram for Car\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Car} (const char $\ast$\+\_\+brand, int \+\_\+hp, int \+\_\+handling, int \+\_\+acc)\hypertarget{classCar_aacb94e35748112166a78c395de6f07ed}{}\label{classCar_aacb94e35748112166a78c395de6f07ed}
+
+\item 
+{\bfseries Car} (const \hyperlink{classCar}{Car} \&c1)\hypertarget{classCar_a8936028d69b41756e556d96fa186995d}{}\label{classCar_a8936028d69b41756e556d96fa186995d}
+
+\item 
+\hyperlink{classCar}{Car} \& {\bfseries operator=} (const \hyperlink{classCar}{Car} \&c1)\hypertarget{classCar_ad9483884ce7d2a258170fedfb501bc19}{}\label{classCar_ad9483884ce7d2a258170fedfb501bc19}
+
+\item 
+void {\bfseries change\+HP} (int \+\_\+hp)\hypertarget{classCar_a12eb724833b2958ab56ad53a7e1de1d3}{}\label{classCar_a12eb724833b2958ab56ad53a7e1de1d3}
+
+\item 
+void {\bfseries change\+Handling} (int \+\_\+hnd)\hypertarget{classCar_a04e5af593bf3e5aa25d3cc3e0bf1ffc6}{}\label{classCar_a04e5af593bf3e5aa25d3cc3e0bf1ffc6}
+
+\item 
+void {\bfseries change\+Acceleration} (int \+\_\+acc)\hypertarget{classCar_a5e6c859226e97b03c8cf0425fa8d99f1}{}\label{classCar_a5e6c859226e97b03c8cf0425fa8d99f1}
+
+\item 
+void {\bfseries change\+Top\+Speed} (int \+\_\+top\+Speed)\hypertarget{classCar_a49d15d74bc509a041dc1dd23e063c77b}{}\label{classCar_a49d15d74bc509a041dc1dd23e063c77b}
+
+\item 
+void {\bfseries change\+Price} (int new\+Price)\hypertarget{classCar_a594b299cef754ac52748e8a6c02bd92e}{}\label{classCar_a594b299cef754ac52748e8a6c02bd92e}
+
+\item 
+void {\bfseries upgrade\+Car} ()\hypertarget{classCar_ad3a6ed15febc63cd34c2e68880710aa3}{}\label{classCar_ad3a6ed15febc63cd34c2e68880710aa3}
+
+\item 
+const int {\bfseries get\+HP} () const \hypertarget{classCar_a3f2be72157e275daabb4fdfc24a86be9}{}\label{classCar_a3f2be72157e275daabb4fdfc24a86be9}
+
+\item 
+const int {\bfseries get\+Handling} () const \hypertarget{classCar_a5a814bae30f31e1f25dcd6611341afe8}{}\label{classCar_a5a814bae30f31e1f25dcd6611341afe8}
+
+\item 
+const int {\bfseries get\+Acceleration} () const \hypertarget{classCar_a974d50369494eff34b03090779074c12}{}\label{classCar_a974d50369494eff34b03090779074c12}
+
+\item 
+const int {\bfseries get\+Top\+Speed} () const \hypertarget{classCar_a54234d8a21835c1fcf8d28e82d4efbcd}{}\label{classCar_a54234d8a21835c1fcf8d28e82d4efbcd}
+
+\item 
+const int {\bfseries get\+Price} () const \hypertarget{classCar_ac64744447db842cd20f93ad0330062ca}{}\label{classCar_ac64744447db842cd20f93ad0330062ca}
+
+\item 
+const char $\ast$ {\bfseries get\+Brand} () const \hypertarget{classCar_a306ea33afd06032526063f1f038cd566}{}\label{classCar_a306ea33afd06032526063f1f038cd566}
+
+\item 
+const void {\bfseries print\+Car} () const \hypertarget{classCar_af523dbf612ca12093e3a149a496ab867}{}\label{classCar_af523dbf612ca12093e3a149a496ab867}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries horse\+Powers}\hypertarget{classCar_a2e90f5c6d86ab27eb19d399796e99aa0}{}\label{classCar_a2e90f5c6d86ab27eb19d399796e99aa0}
+
+\item 
+int {\bfseries handling}\hypertarget{classCar_a2f99e43d442a5e16c3815e6ba5a27a09}{}\label{classCar_a2f99e43d442a5e16c3815e6ba5a27a09}
+
+\item 
+int {\bfseries acceleration}\hypertarget{classCar_a5842dfb99de2e00bf7a13e96aabc7d6b}{}\label{classCar_a5842dfb99de2e00bf7a13e96aabc7d6b}
+
+\item 
+int {\bfseries top\+Speed}\hypertarget{classCar_a9eae4ca80a2f853f6dbcc89e900363e9}{}\label{classCar_a9eae4ca80a2f853f6dbcc89e900363e9}
+
+\item 
+int {\bfseries price}\hypertarget{classCar_a9c6c465935cf5b1f1bc0783caaa7b022}{}\label{classCar_a9c6c465935cf5b1f1bc0783caaa7b022}
+
+\item 
+char $\ast$ {\bfseries brand}\hypertarget{classCar_a5d6a5503c5dcde621f20d0302b08d0f6}{}\label{classCar_a5d6a5503c5dcde621f20d0302b08d0f6}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+car.\+hpp\end{DoxyCompactItemize}

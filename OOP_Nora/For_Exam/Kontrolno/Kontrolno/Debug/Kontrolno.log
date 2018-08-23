@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\grade\desktop\kontrolno\kontrolno\main.cpp(251): error C2039: 'getTicketsArray': is not a member of 'NormalTicket<int>'
+  c:\users\grade\desktop\kontrolno\kontrolno\main.cpp(283): note: see declaration of 'NormalTicket<int>'
+  c:\users\grade\desktop\kontrolno\kontrolno\main.cpp(288): note: see reference to function template instantiation 'void priceAndPeople<int>(NormalTicket<int> **,GroupTicket<int> **)' being compiled
+c:\users\grade\desktop\kontrolno\kontrolno\main.cpp(251): error C2227: left of '->getPrice' must point to class/struct/union/generic type
+c:\users\grade\desktop\kontrolno\kontrolno\main.cpp(265): error C2227: left of '->getPrice' must point to class/struct/union/generic type
+  c:\users\grade\desktop\kontrolno\kontrolno\main.cpp(265): note: type is 'const NormalTicket<int> **'
