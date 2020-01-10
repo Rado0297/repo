@@ -1,0 +1,77 @@
+isPrime(N, N).
+isPrime(N, X) :- X<N, mod(N, X)=\=0, X1 is X+1, isPrime(N, X1).
+isPrime(N) :- isPrime(N, 2).
+
+primeDivs(1, R, R).
+primeDivs(N, L, K) :- N>1, betwen(2, N, X), isPrime(X), mod(N, X)=:=0, N1 is N/X, primeDivs(N1, [X|L], K).
+primeDivs(N, R) :- primeDivs(N, [], R).
+
+occ([], _, 0).
+occ([X|XS], H, N) :- X==H, occ(XS, H, M), N is M+1.
+occ([X|XS], H, N) :- X\=H, occ(XS, H, N).
+
+gcd(0, B, B).
+gcd(A, B, C) :- A>0, X is mod(B, A), gcd(X, A, C).
+
+gcd_all([X], X).
+gcd_all([X|XS], P) :- gcd_all(XS, Q), gcd(X, Q, P).
+
+perm([], []).
+perm([X|XS], P) :- perm(XS, Q),
+    			   append(A, B, Q),
+    			   append(A, [X|B], P).
+
+betwen(A, B, A) :- A=<B.
+betwen(A, B, C) :- A<B, A1 is A+1, betwen(A1, B, C).
+
+genKS(1, S, [S]).
+genKS(K, S, [X|XS]) :- K>1, betwen(0, S, X), K1 is K-1, S1 is S-X, genKS(K1, S1, XS).
+
+inter([], _, []).
+inter([X|XS], YS, [X|R]) :- member(YS, X), inter(XS, YS, R).
+inter([X|XS], YS, R) :- \+ member(YS, X), inter(XS, YS, R).
+
+unique([], R, R).
+unique([X|XS], R, K) :- \+ member(R, X), unique(XS, [X|R], K).
+unique([X|XS], R, K) :- member(R, X), unique(XS, R, K).
+unique(L, R) :- unique(L, [], R).
+
+inters(A, B, C) :- inter(A, B, K), unique(K, C).
+
+append([], Y, Y).
+append([X|XS], YS, [X|Res]) :- append(XS, YS, Res).
+
+sublist(L, M) :- append(_, R, L), append(M, _, R).
+
+subset(_, []).
+subset([X|XS], [X|YS]) :- subset(XS, YS).
+subset([_|XS], YS) :- subset(XS, YS).
+
+subset_n(L, M, N) :- subset(L, M), len(M, N).
+
+rev([], R, R).
+rev([X|XS], R, K) :- rev(XS, [X|R], K).
+rev(L, R) :- rev(L, [], R).
+
+% rational numbers
+q(R) :- nat(T), betwen(0, T, A), B is T-A, B>0,
+                betwen(0, T, C), D is T-C, D>0,
+                betwen(0, T, E), F is T-E, F>0,
+    	 R1 is A/B, R2 is C/D, R3 is E/F,
+         R is R1^2 + R2^2 + R3^2.
+
+% arithmetic progression
+seq(_, _, 1, R, R).
+seq(A, D, N, R, K) :- N>0, A1 is A+D, N1 is N-1, seq(A1, D, N1, [A1|R], K).
+seq(A, D, N, R) :- N>0, D>0, seq(A, D, N, [A], R).
+
+num([], R, R).
+num([X|XS], R, K) :- N is R*10+X, num(XS, N, K).
+num(L, R) :- num(L, 0, R).				   
+
+len([], 0).
+len([_|XS], N) :- len(XS, M), N is M+1.
+				   
+
+
+
