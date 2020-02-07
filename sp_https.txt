@@ -1,0 +1,8 @@
+https://github.com/rgeorgiev583/sp-2019-2020/tree/master/kr/1
+https://github.com/rgeorgiev583/sp-2019-2020/tree/master/pkr
+https://github.com/rgeorgiev583/sp-2019-2020/blob/master/pkr/3-1-expand.c
+https://github.com/rgeorgiev583/sp-2019-2020/tree/master/pkr
+https://github.com/rgeorgiev583/sp-2019-2020/blob/master/projects/fold.md
+https://github.com/rgeorgiev583/sp-2019-2020/tree/master/projects
+https://github.com/ZdravkoHvarlingov/sp-2018-2019/tree/master/projects/81515
+https://github.com/ZdravkoHvarlingov/sp-2018-2019/blob/master/projects/81515/fold.c
